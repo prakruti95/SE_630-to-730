@@ -1,0 +1,43 @@
+Processor-version
+RAM
+Memory-Storage
+Screen resolution
+GPU
+SSD/HDD
+
+Procedural Programming : C
+Object Oriented Programming : C++,Java,Php,Python
+Logical Programming : Prolog
+Functional Programming :Python
+
+Coding:
+
+1)Website dev:
+Php,Java,Python,.net,NodeJS
+
+Frontend Developer
+Backend Developer
+Fullstack Developer
+Mernstack Developer
+
+2)Mobile App dev:
+Android,Ios,Flutter
+
+3)data science & DA:
+
+Non-Coding:
+1)Designing : 
+2)Digital Marketing:
+3)Software Testing:QA,QC,Tester
+
+https://careercenter.tops-int.com/course
+http://www.testingmcafeesites.com/
+
+Download:
+https://code.visualstudio.com/download
+https://turbo-c.en.softonic.com/
+https://www.onlinegdb.com/
+
+
+
+
