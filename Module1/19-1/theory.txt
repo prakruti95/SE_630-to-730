@@ -1,0 +1,40 @@
+Programming - C Language
+
+printf -> it will print something
+void   -> it will return null value
+main   -> it is a main function
+getch  -> terminate the program
+header files:
+stdio  -> header file [standard input output]
+conio  -> header file [console input output]
+.h -> header file extension
+# -> Preprocessor
+include-> add something
+
+\n -> new line
+\t -> tab
+void main -> int main
+getch -> return 0
+
+data type: 
+
+integer -> int -> numeric value -> %d
+float -> float -> decimal value -> 4 byte-> %f
+character -> char -> T-> %c
+double -> double -> decimal value -> 8 bytes-> %lf
+
+variable declaration:
+
+int num1,num2,num3;
+
+n
+n1
+n_tops
+1n
+
+
+
+
+
+
+
