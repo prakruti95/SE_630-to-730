@@ -1,0 +1,118 @@
+1.
+//Arithmetic Op
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+   
+        int a = 7;
+        int b = 3;
+        
+        int add = a+b;
+        printf("\n %d",add);
+        
+        int sub = a-b;
+        printf("\n %d",sub);
+        
+        int mul = a*b;
+        printf("\n %d",mul);
+        
+        int div1 = a/b;
+        printf("\n %d",div1);
+        
+        int mod = a%b;
+        printf("\n %d",mod);
+   
+
+    return 0;
+}
+
+2)
+#include<stdio.h>
+
+int main()
+{
+    int a = 6;
+    int b = 3;
+    
+    a+=b;//a=a+b//6+3=9
+    printf("\n %d",a);//9
+    
+    a-=b;//a=a-b // 9-3 ==6
+    printf("\n %d",a);
+    
+    a*=b;
+    printf("\n %d",a);
+    
+    return 0;
+}
+
+3)
+#include<stdio.h>
+
+int main()
+{
+    int a = 6;
+    int b = 3;
+    int c = 6;
+    
+    printf("\n %d",a<b);
+    printf("\n %d",a>b);
+    printf("\n %d",a>=c);
+    printf("\n %d",a<=c);
+    printf("\n %d",a==b);
+    printf("\n %d",a!=b);
+    
+    return 0;
+}
+
+4)
+#include<stdio.h>
+
+int main()
+{
+    float a = 6.2;
+    float b = 3.2;
+   
+    
+    printf("\n %d",a>b);
+   
+    
+    return 0;
+}
+
+5)
+#include<stdio.h>
+
+int main()
+{
+    float a = 6.2;
+    float b = 3.2;
+   
+   int d = a+b;
+   printf("%d",d);
+   
+ 
+    return 0;
+}
+
+6)
+#include<stdio.h>
+
+int main()
+{
+    int num=5,num2=3;
+    
+    // printf("Enter Your Number: ");
+    // scanf("%d",&num);
+    
+    // printf("Enter Your Number2: ");
+    // scanf("%d",&num2);
+    
+    int ans = num+num2;
+    
+    printf("Your ans is %d",ans);
+   
+ 
+    return 0;
+}

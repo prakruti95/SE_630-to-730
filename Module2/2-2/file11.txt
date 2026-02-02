@@ -1,0 +1,93 @@
+1.
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+   int num;
+   
+   printf("Enter Your Number");
+   scanf("%d",&num);
+   
+    if(num<0)
+    {
+        printf("Negative");
+    }
+    else
+    {
+        printf("Positive");
+    }
+    
+    
+    return 0;
+}
+
+2.
+else if:
+#include<stdio.h>
+
+int main()
+{
+   int marks;
+   
+   printf("Enter Your marks");
+   scanf("%d",&marks);//56
+   
+   if(marks>=70)
+   {
+       printf("A Grade");
+   }
+   else if(marks>=60)
+   {
+        printf("B Grade");
+   }
+   else if(marks>=50)
+   {
+        printf("C Grade");
+   }
+   else if(marks>=40)
+   {
+        printf("D Grade");
+   }
+   else
+   {
+        printf("Fail");
+   }
+    
+    return 0;
+}
+
+3.
+#include<stdio.h>
+
+int main()
+{
+   int marks;
+   
+   printf("Enter Your marks");
+   scanf("%d",&marks);//56
+   
+   if(marks>=70)
+   {
+       printf("A Grade");
+   }
+   if(marks>=60)
+   {
+        printf("B Grade");
+   }
+   if(marks>=50)
+   {
+        printf("C Grade");
+   }
+  if(marks>=40)
+   {
+        printf("D Grade");
+   }
+   else
+   {
+        printf("Fail");
+   }
+    
+    return 0;
+}
+
+

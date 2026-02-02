@@ -1,0 +1,39 @@
+1. Requirement Gathering
+2. Analysis
+3. Design
+4. Implementation
+5. Testing
+6. Maintenance
+
+Operators:
+1)arithmetic Op : +, - ,* , / , %
+c=a+b
+
+
+2)shorthand op : +=, -=, *=, /= , %=
+a+=b -> a=a+b
+b-=c -> b=b-c
+
+3)logical op
+4)assignment op
+5)bitwise op
+6)miscellneous op
+7)relational op : <,>,<=,>=,==,!=
+
+Task :
+
+int pizza = 100;
+int burger = 70;
+int coffee = 120;
+
+pizaa+=burger;
+
+
+
+
+
+
+
+
+
+
