@@ -1,0 +1,36 @@
+Loop: Repetation
+
+Types of Loop
+1)Entry Control Loop:
+For
+While
+
+2)Exit Control Loop:
+Do While
+-------------------------------------------------------------
+1)
+for(initialization;condition;incre/decre)
+{
+	statement
+}
+
+2)
+initialization;
+
+while(condition)
+{
+	statement
+	incre/decre
+}
+
+3)
+initialization;
+
+do
+{
+}
+while(condition);
+
+Task:
+1)factorial num
+2)sum of all digits
