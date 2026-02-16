@@ -1,0 +1,18 @@
+Function:When you want to reuse the same code again and again
+at that time you are using function
+
+types of functions
+1)inbuilt function:string,math
+
+#include<string.h>
+#include<math.h>
+
+
+
+
+2)user defined function
+ a)with para with return type
+ b)with para without return type
+ c)without para with return type
+ d)without para without return type
+
