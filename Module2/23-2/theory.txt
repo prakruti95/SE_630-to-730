@@ -1,0 +1,51 @@
+Array : Collection of elements that is called an Array
+
+Types of Array
+1)one dimensional [1-D]
+2)two dimensional [2-D]
+
+Symbol : []
+
+Array -> [Size]
+
+Array's index will always start with 0.
+
+Array : 
+[50,40,20,30,45,70]
+
+Asc: 20,30,40,45,50,70
+Desc:70,50,45,40,30,20
+
+[50,40,20,30,45,70]
+40,50,20,30,45,70
+40,20,50,30,45,70
+20,40,50,30,45,70
+20,40,30,50,45,70
+20,30,40,50,45,70
+20,30,40,45,50,70
+=======================================
+Swapping With using third varible
+int a = 10;
+int b = 20;
+int temp; 
+
+temp = a; //10
+a = b;   //20 
+b = temp; //10
+===========================================
+Swapping Without using third varible
+a=20
+b=10
+
+a = a + b; //20+10//30
+b = a - b; //30-10//20
+a = a - b; //30-20//10
+
+a=10
+b=20
+
+
+
+
+
+
