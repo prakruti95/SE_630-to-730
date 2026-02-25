@@ -1,0 +1,17 @@
+switch-case
+1 -> register
+Enter Your Name
+Enter Your Email
+Enter Your Password
+
+data write file
+
+
+2 -> login
+Email
+Password
+
+Login Success
+Login Fail
+
+
