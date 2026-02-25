@@ -1,0 +1,8 @@
+Pointer:
+* -> pointer variable
+& -> address assign
+
+call by value : do not change actual parameter value
+call by refrence : change actual parameter value 
+
+File Management:
