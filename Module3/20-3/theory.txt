@@ -1,0 +1,8 @@
+polymorphism: Many ways to perform anything
+
+1)Method Overloading:when two or more methods having a same name but number of
+parameters are diffrent
+
+2)Method Overriding:when two or more methods having a same name and number of
+parameters are also same
+
