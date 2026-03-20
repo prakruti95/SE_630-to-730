@@ -1,0 +1,302 @@
+Inheritance: When one object acquire all the 
+properties and behaviour of parent class
+that is called inheritance
+
+Types of Inheritance
+1)single
+2)multilevel
+3)multiple
+4)Hierarchical
+5)Hybrid
+
+parent-child
+super-sub
+base-derived
+
+1.single:
+
+#include<iostream>
+using namespace std;
+
+class A
+{
+    public:
+    void a()
+    {
+        cout<<"A called"<<endl;
+    }
+};
+class B : public A
+{
+    public:
+    void b()
+    {
+        cout<<"B called"<<endl;
+    }
+};
+int main()
+{
+    //object creation
+
+     B b1;
+     
+     //method call
+     b1.a();
+     b1.b();
+
+    return 0;
+}
+
+2.multilevel:
+
+
+#include<iostream>
+using namespace std;
+
+class A
+{
+    public:
+    void a()
+    {
+        cout<<"A called"<<endl;
+    }
+};
+class B : public A
+{
+    public:
+    void b()
+    {
+        cout<<"B called"<<endl;
+    }
+};
+class C : public B
+{
+    public:
+    void c()
+    {
+        cout<<"C called"<<endl;
+    }
+};
+int main()
+{
+    //object creation
+
+    C c1;
+     
+     //method call
+     c1.a();
+     c1.b();
+     c1.c();
+
+    return 0;
+}
+
+3.Hierarchical:
+#include<iostream>
+using namespace std;
+
+class Bank
+{
+    public:
+    void bank()
+    {
+        cout<<"banking"<<endl;
+    }
+};
+
+class Current : public Bank
+{
+    public:
+    void current()
+    {
+        cout<<"current"<<endl;
+    }
+};
+class Save  : public Bank
+{
+    public:
+    void save()
+    {
+        cout<<"saving"<<endl;
+    }
+};
+
+
+int main()
+{
+    Current c;
+    Save s;
+    
+    c.current();
+    s.save();
+    c.bank();
+    
+    return 0;
+   
+}
+
+4. Multiple:
+#include<iostream>
+using namespace std;
+
+class A
+{
+    public:
+    void a()
+    {
+        cout<<"A called"<<endl;
+    }
+};
+class B
+{
+    public:
+    void b()
+    {
+        cout<<"B called"<<endl;
+    }
+};
+class C : public A, public B
+{
+    public:
+    void c()
+    {
+        cout<<"C called"<<endl;
+    }
+};
+
+int main()
+{
+    C c;
+    c.a();
+    c.b();
+    c.c();
+    
+    return 0;
+   
+}
+5. Hybrid:
+#include<iostream>
+using namespace std;
+
+class A
+{
+    public:
+    void a()
+    {
+        cout<<"A called"<<endl;
+    }
+};
+class B : public A
+{
+    public:
+    void b()
+    {
+        cout<<"B called"<<endl;
+    }
+};
+class C 
+{
+    public:
+    void c()
+    {
+        cout<<"C called"<<endl;
+    }
+};
+class D : public B,public C
+{
+    public:
+    void d()
+    {
+        cout<<"D called"<<endl;
+    }
+};
+
+int main()
+{
+    D d1;
+    d1.a();
+    d1.b();
+    d1.c();
+    d1.d();
+    
+    return 0;
+   
+}
+
+A -> user input data,
+
+B -> area of rec a*b : A
+
+C -> area of tri 0.5*a*b : A
+
+main()
+{
+ a,b
+ a.getdata(a,b)
+}
+
+
+Real:
+#include<iostream>
+using namespace std;
+
+class A
+{
+    public:
+    int a1=0,b1=0;
+    void takeinput(int a,int b)
+    {
+       a1 = a;
+       b1 = b;
+    }
+};
+class B : public A
+{
+    public:
+    void b()
+    {
+       int ans = a1*b1;
+       cout<<"Area of Rectangle is :"<<ans<<endl;
+    }
+};
+class C : public A
+{
+    public:
+    void c()
+    {
+        float  ans2 = 0.5*a1*b1;
+        cout<<"Area of Tri is :"<<ans2<<endl;
+    }
+};
+
+
+int main()
+{
+    B b;
+    C c;
+    
+    int mya,myb;
+    
+    cout<<"Enter Value for a:";
+    cin>>mya;
+    
+    cout<<"Enter Value for b:";
+    cin>>myb;
+    
+    
+    b.takeinput(mya,myb);
+    b.b();
+    c.takeinput(mya,myb);
+    c.c();
+    
+    
+    return 0;
+   
+}
+
+
+
+
+
+
+
