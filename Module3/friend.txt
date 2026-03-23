@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+class Box 
+{
+private:
+    int width;
+public:
+    Box(int w) : width(w) {}
+
+    // Declare a global function as a friend
+    friend void printWidth(Box box); 
+};
+
+// Define the friend function outside the class
+void printWidth(Box box) {
+    // Can access private member 'width'
+    cout << "Width of box: " << box.width << endl; 
+}
+
+int main() {
+    Box myBox(10);
+    printWidth(myBox); // Call the friend function like a normal function
+    return 0;
+}
