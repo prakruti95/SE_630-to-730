@@ -1,3 +1,17 @@
+Types of Commnads in MYSQL
+
+1)DDL -> Data definition language
+-> create,alter,drop,truncate,rename
+
+2)DML -> Data Manipulation language
+-> insert,update,delete
+
+3)DQL -> Data Query language
+-> select
+
+4)DCL -> Data Control language
+-> rollback,commit
+
 ============================DDL===========================
 
 1)Create Database:
