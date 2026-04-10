@@ -1,0 +1,40 @@
+CREATE TABLE Students (
+    student_id INT PRIMARY KEY,
+    name VARCHAR(50),
+    age INT,
+    course VARCHAR(50),
+    marks INT
+);
+
+
+
+
+-> Add a new column email to the table
+-> Change the datatype of marks to decimal
+-> Rename column name to student_name
+-> Remove the column age
+-> Rename the table Students to Student_Details
+-> Delete the entire table
+
+
+-> Insert 5 student records into the table
+-> Update marks of a student whose student_id = 2
+-> Change course of a student named “Amit”
+-> Increase marks of all students by 5
+-> Delete a student whose student_id = 4
+-> Delete all records from the table
+
+
+-> Display all records from the table
+-> Show only name and marks columns
+-> Find students with marks greater than 80
+-> Display students belonging to “BCA” course
+-> Sort students by marks in descending order
+-> Count total number of students
+-> Find average marks of students
+-> Find highest and lowest marks
+-> Display students whose name starts with ‘A’
+-> Show distinct courses available
+
+
+
