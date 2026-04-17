@@ -1,0 +1,45 @@
+1. CREATE VIEW basicdetailview AS SELECT Dr_Name,Location,Speciality from doctors
+
+Trigger:
+INSERT
+UPDATE
+DELETE
+
+BEFORE INSERT
+AFTER INSERT
+BEFORE UPDATE
+AFTER UPDATE
+BEFORE DELETE
+AFTER DELETE
+
+DELIMITER $$
+
+	CREATE TRIGGER mytrigger1 AFTER INSERT  ON subscribers FOR EACH ROW
+    
+    BEGIN
+    	INSERT INTO audit_subscribers SET action_performed ='Inserted a subscriber',fname=new.fname;	
+    END $$
+
+DELIMITER ;
+
+DELIMITER $$
+
+	CREATE TRIGGER mytrigger2 AFTER UPDATE  ON subscribers FOR EACH ROW
+    
+    BEGIN
+    	INSERT INTO audit_subscribers SET action_performed ='Updated a subscriber',fname=old.fname;	
+    END $$
+
+DELIMITER ;
+
+DELIMITER $$
+
+	CREATE TRIGGER mytrigger3 AFTER DELETE  ON subscribers FOR EACH ROW
+    
+    BEGIN
+    	INSERT INTO audit_subscribers SET action_performed ='Deleted a subscriber',fname=old.fname;	
+    END $$
+
+DELIMITER ;
+
+

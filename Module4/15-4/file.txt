@@ -1,0 +1,40 @@
+Function -> return type
+Procedure -> may have return type
+
+1.
+DELIMITER //
+
+	CREATE PROCEDURE deleteproc(INOUT myid int)
+    
+    BEGIN
+    	DELETE FROM customers WHERE id = myid;
+    END //
+
+DELIMITER ;
+
+2.
+DELIMITER //
+
+	CREATE PROCEDURE updateproc(INOUT myid int)
+    
+    BEGIN
+    	Update customers set lastname='xyz' where id = myid;
+    END //
+
+DELIMITER ;
+
+3.
+DELIMITER //
+
+	CREATE PROCEDURE selectproc(INOUT myid int)
+    
+    BEGIN
+    	select*from customers where id = myid;
+    END //
+
+DELIMITER ;
+
+
+ALTER TABLE customers ADD myid int , ADD INDEX(`myid`);
+
+
