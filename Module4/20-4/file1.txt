@@ -1,0 +1,24 @@
+SELECT IF(500<1000, "YES", "NO");
+
+SELECT ProductName, Price,
+CASE
+  WHEN Price < 20 THEN 'Low Cost'
+  WHEN Price BETWEEN 20 AND 50 THEN 'Medium Cost'
+  ELSE 'High Cost'
+END AS PriceCategory
+
+DELIMITER $$ 
+CREATE PROCEDURE GeekLoop()
+ BEGIN
+DECLARE no INT;
+  SET no = 0;
+  label: LOOP
+    SET no = no +1;
+    select no ;
+    IF no =5 THEN
+     LEAVE label;
+    END IF;
+ END LOOP label;
+SELECT no;
+END $$
+DELIMITER ;
