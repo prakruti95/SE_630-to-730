@@ -1,0 +1,50 @@
+1.
+DECLARE
+  message varchar2(100):= 'Hello, World!'; 
+BEGIN 
+  dbms_output.put_line(message); 
+END;
+/
+
+2.
+
+DECLARE 
+   a integer := 10; 
+   b integer := 20; 
+   c integer; 
+   f real; 
+BEGIN 
+   c := a + b; 
+   dbms_output.put_line('Value of c: ' || c); 
+   f := 70.0/3.0; 
+   dbms_output.put_line('Value of f: ' || f); 
+END; 
+/  
+
+3.
+
+PI CONSTANT NUMBER := 3.141592654; 
+DECLARE 
+   -- constant declaration 
+   pi constant number := 3.141592654; 
+   -- other declarations 
+   radius number(5,2);  
+   dia number(5,2);  
+   circumference number(7, 2); 
+   area number (10, 2); 
+BEGIN  
+   -- processing 
+   radius := 9.5;  
+   dia := radius * 2;  
+   circumference := 2.0 * pi * radius; 
+   area := pi * radius * radius; 
+   -- output 
+   dbms_output.put_line('Radius: ' || radius); 
+   dbms_output.put_line('Diameter: ' || dia); 
+   dbms_output.put_line('Circumference: ' || circumference); 
+   dbms_output.put_line('Area: ' || area); 
+END; 
+/ 
+
+4.
+
