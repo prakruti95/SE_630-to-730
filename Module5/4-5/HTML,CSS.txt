@@ -1,0 +1,1388 @@
+1.
+Here’s a clean, structured version of your **Session 1: Introduction to Web Design** content, with just enough depth for clarity without overwhelming beginners:
+
+---
+
+## **Session 1: Introduction to Web Design**
+
+### **1. How Browsers Render HTML + CSS**
+
+When you open a website, the browser (like Google Chrome) does several things behind the scenes:
+
+* **Step 1: Fetch files**
+  It downloads HTML, CSS, and other assets (images, fonts, scripts).
+
+* **Step 2: Parse HTML → DOM**
+  HTML is converted into a **DOM (Document Object Model)** — a tree-like structure representing the page.
+
+* **Step 3: Parse CSS → CSSOM**
+  CSS is turned into a structure that defines styles for elements.
+
+* **Step 4: Combine → Render Tree**
+  DOM + CSSOM = Render Tree (what actually gets displayed).
+
+* **Step 5: Layout & Paint**
+  The browser calculates positions (layout) and draws pixels (paint) on screen.
+
+👉 Key idea: Browsers don’t “read HTML like text”—they **build a structured visual model**.
+
+---
+
+### **2. Front-End vs Back-End Development**
+
+| Aspect     | Front-End                      | Back-End                          |
+| ---------- | ------------------------------ | --------------------------------- |
+| What it is | What users see & interact with | Server-side logic & data handling |
+| Languages  | HTML, CSS, JavaScript          | Python, Java, Node.js, PHP        |
+| Runs on    | Browser                        | Server                            |
+| Focus      | UI/UX, layout, responsiveness  | Databases, APIs, authentication   |
+
+👉 Simple analogy:
+
+* Front-end = **restaurant dining area (what you see)**
+* Back-end = **kitchen (how things work behind the scenes)**
+
+---
+
+### **3. Developer Tools Overview (Chrome DevTools)**
+
+**Chrome DevTools** is built into Chrome and is essential for debugging and learning.
+
+**Key Panels:**
+
+* **Elements** → Inspect and edit HTML/CSS
+* **Styles** → Modify CSS live
+* **Console** → Run JavaScript & see errors
+* **Network** → View loading requests
+* **Application** → Storage, cookies, etc.
+
+👉 Shortcut:
+
+* Right-click → **Inspect**
+* Or press `Ctrl + Shift + I`
+
+---
+
+### **4. Demo: Inspect Elements on Instagram Home Page**
+
+Use Instagram as a real-world example:
+
+* Open Instagram in Chrome
+* Right-click anywhere → **Inspect**
+* Hover over elements in the **Elements panel**
+* Notice:
+
+  * Nested structure (divs inside divs)
+  * Classes used for styling
+  * Live CSS changes reflecting instantly
+
+👉 Try this:
+
+* Change text
+* Modify colors
+* Hide elements
+
+This builds intuition about how websites are structured.
+
+---
+
+### **5. Understanding the DOM (Core Concept)**
+
+The **DOM** is a tree structure like this:
+
+```
+<html>
+  <body>
+    <h1>Hello</h1>
+    <p>Welcome</p>
+  </body>
+</html>
+```
+
+Becomes:
+
+```
+HTML
+ └── BODY
+      ├── H1
+      └── P
+```
+
+**Important concepts:**
+
+* Parent / Child relationships
+* Nesting
+* Elements vs Nodes
+* Classes & IDs
+
+👉 Why it matters:
+
+* JavaScript interacts with the DOM
+* CSS targets DOM elements
+* DevTools shows the DOM live
+
+---
+
+### **Wrap-Up Insight**
+
+By the end of this session, learners should understand:
+
+* How a browser turns code into visuals
+* The role of front-end vs back-end
+* How to inspect and experiment with real websites
+* The DOM as the foundation of everything in web design
+
+2.
+Here’s a clear, teachable structure for your **Session 2: HTML Page Structure**, designed to build directly on Session 1:
+
+---
+
+## **Session 2: HTML Page Structure**
+
+### **1. HTML Boilerplate (Basic Structure)**
+
+Every HTML page starts with a standard skeleton:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Page</title>
+</head>
+<body>
+    <h1>Hello World</h1>
+</body>
+</html>
+```
+
+**Breakdown:**
+
+* `<!DOCTYPE html>` → Tells the browser this is HTML5
+* `<html>` → Root of the document
+* `<head>` → Metadata (not visible on page)
+* `<title>` → Tab title
+* `<body>` → Visible content
+
+👉 Key idea: The browser (like Google Chrome) reads this and builds the DOM you learned earlier.
+
+---
+
+### **2. Common HTML Tags**
+
+#### **Headings & Paragraphs**
+
+```html
+<h1>Main Heading</h1>
+<h2>Subheading</h2>
+<p>This is a paragraph.</p>
+```
+
+* `<h1>` to `<h6>` → hierarchy of importance
+* `<p>` → blocks of text
+
+---
+
+#### **Lists**
+
+**Unordered List (bullets):**
+
+```html
+<ul>
+  <li>Apple</li>
+  <li>Banana</li>
+</ul>
+```
+
+**Ordered List (numbers):**
+
+```html
+<ol>
+  <li>Step 1</li>
+  <li>Step 2</li>
+</ol>
+```
+
+---
+
+#### **Anchors (Links)**
+
+```html
+<a href="https://www.instagram.com">Visit Instagram</a>
+```
+
+* `href` → destination URL
+* Opens web pages like Instagram
+
+---
+
+#### **Images**
+
+```html
+<img src="profile.jpg" alt="My Photo" width="200">
+```
+
+* `src` → image path
+* `alt` → accessibility text
+
+---
+
+#### **Tables**
+
+```html
+<table border="1">
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>John</td>
+    <td>20</td>
+  </tr>
+</table>
+```
+
+* `<table>` → container
+* `<tr>` → row
+* `<th>` → header cell
+* `<td>` → data cell
+
+---
+
+### **3. Demo: Create a Personal “About Me” Page**
+
+Here’s a simple example students can build:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About Me</title>
+</head>
+<body>
+
+    <h1>My Name</h1>
+    <p>Hello! I am learning web design.</p>
+
+    <h2>My Hobbies</h2>
+    <ul>
+        <li>Reading</li>
+        <li>Coding</li>
+        <li>Traveling</li>
+    </ul>
+
+    <h2>My Favorite Website</h2>
+    <a href="https://www.instagram.com">Visit Instagram</a>
+
+    <h2>My Photo</h2>
+    <img src="profile.jpg" alt="My Photo" width="200">
+
+    <h2>My Details</h2>
+    <table border="1">
+        <tr>
+            <th>Age</th>
+            <th>City</th>
+        </tr>
+        <tr>
+            <td>20</td>
+            <td>Ahmedabad</td>
+        </tr>
+    </table>
+
+</body>
+</html>
+```
+
+---
+
+### **4. Teaching Focus (Depth)**
+
+Emphasize these concepts:
+
+* **Structure over memorization** → students should understand *why* tags exist
+* **Nesting** → tags inside tags (parent-child relationship)
+* **Semantics** → headings vs paragraphs (meaning matters)
+* **Clean formatting** → indentation improves readability
+
+---
+
+### **5. Suggested Hands-On Activities**
+
+* Modify headings (change sizes and hierarchy)
+* Add 3 hobbies and 1 image
+* Create a table with personal data
+* Add at least one external link
+
+---
+
+### **Wrap-Up Insight**
+
+By the end of Session 2, students should:
+
+* Understand how an HTML page is structured
+* Be comfortable using common tags
+* Be able to build a simple personal webpage
+
+
+3.
+Session 3: Forms & Inputs
+1. What Are Forms?
+
+Forms allow users to send data to a server—this is one of the first bridges between front-end and back-end.
+
+👉 Examples:
+
+Login pages
+Sign-up forms
+Search bars
+2. Basic Form Structure
+<form action="/submit" method="POST">
+    <!-- form elements go here -->
+</form>
+
+Key attributes:
+
+action → where the data is sent
+method → how data is sent (GET or POST)
+
+👉 Focus today: POST (used for sensitive or large data)
+
+3. Common Form Elements
+Input Fields
+<input type="text" placeholder="Enter name">
+<input type="email" placeholder="Enter email">
+<input type="password" placeholder="Enter password">
+
+Common types:
+
+text, email, password, number, date
+Labels (Important for UX & Accessibility)
+<label for="name">Name:</label>
+<input type="text" id="name">
+
+👉 Clicking the label focuses the input—small detail, big usability win.
+
+Dropdown (Select)
+<select>
+  <option>Student</option>
+  <option>Developer</option>
+</select>
+Textarea
+<textarea placeholder="Write your bio"></textarea>
+Buttons
+<button type="submit">Register</button>
+4. Validation Attributes (Client-Side)
+
+HTML gives built-in validation without JavaScript:
+
+<input type="email" required>
+<input type="password" minlength="6" required>
+
+Useful attributes:
+
+required → must be filled
+minlength / maxlength
+pattern → custom regex validation
+
+👉 Key idea: Validation happens before sending data
+
+5. Demo: Registration Form (Social Bio Link App)
+
+Students build a simple sign-up form:
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+</head>
+<body>
+
+<h1>Create Your Profile</h1>
+
+<form action="/register" method="POST">
+
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="role">Role:</label><br>
+    <select id="role" name="role">
+        <option>Student</option>
+        <option>Creator</option>
+        <option>Developer</option>
+    </select><br><br>
+
+    <label for="bio">Bio:</label><br>
+    <textarea id="bio" name="bio"></textarea><br><br>
+
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password" minlength="6" required><br><br>
+
+    <button type="submit">Register</button>
+
+</form>
+
+</body>
+</html>
+6. Depth: Understanding POST in DevTools
+
+Use Chrome DevTools to show what happens behind the scenes:
+
+Steps:
+
+Open DevTools (Ctrl + Shift + I)
+Go to Network tab
+Submit the form
+Click the request (e.g., /register)
+
+What students should observe:
+
+Request Method: POST
+Form Data: key-value pairs (name, email, etc.)
+Headers: metadata about the request
+
+👉 Important insight:
+
+The browser sends data as a HTTP request
+Back-end receives and processes it
+7. Conceptual Depth (What’s Really Happening)
+Form → converts inputs into key-value pairs
+Browser → sends HTTP request
+Server → processes and responds
+
+👉 Example:
+
+name=John&email=john@example.com
+8. Suggested Hands-On Tasks
+Add a phone number field
+Add validation (required + minlength)
+Add another dropdown option
+Try submitting and inspect in DevTools
+
+4.
+
+Here’s a well-structured, teaching-friendly version of your **Session 4: Semantic HTML5**, with a practical demo and conceptual clarity:
+
+---
+
+## **Session 4: Semantic HTML5**
+
+### **1. What is Semantic HTML?**
+
+Semantic HTML uses tags that **describe meaning**, not just layout.
+
+👉 Instead of using generic `<div>` everywhere, we use meaningful elements like:
+
+* `<header>`
+* `<nav>`
+* `<article>`
+* `<footer>`
+
+**Why it matters:**
+
+* Better readability for developers
+* Improved accessibility (screen readers)
+* Helps search engines understand content
+
+---
+
+### **2. Key Semantic Tags**
+
+#### **`<header>`**
+
+Represents the top section of a page or section.
+
+```html id="jpf1q5"
+<header>
+  <h1>My Website</h1>
+</header>
+```
+
+---
+
+#### **`<nav>`**
+
+Used for navigation links.
+
+```html id="qmyh6n"
+<nav>
+  <a href="#">Home</a>
+  <a href="#">About</a>
+</nav>
+```
+
+---
+
+#### **`<article>`**
+
+Independent, reusable content (like a post or video card).
+
+```html id="pl7w8g"
+<article>
+  <h2>Blog Title</h2>
+  <p>Content goes here...</p>
+</article>
+```
+
+---
+
+#### **`<footer>`**
+
+Bottom section with additional info.
+
+```html id="7g4uvg"
+<footer>
+  <p>© 2026 My Website</p>
+</footer>
+```
+
+---
+
+#### **Other Useful Tags (Mention Briefly)**
+
+* `<section>` → groups related content
+* `<aside>` → side content (ads, suggestions)
+* `<main>` → main content area
+
+---
+
+### **3. Semantic vs Non-Semantic**
+
+| Non-Semantic | Semantic Equivalent     |
+| ------------ | ----------------------- |
+| `<div>`      | `<header>`, `<section>` |
+| `<div>`      | `<article>`             |
+| `<div>`      | `<footer>`              |
+
+👉 Key idea:
+Semantic tags **tell a story about the page structure**, not just display it.
+
+---
+
+### **4. Demo: YouTube-Style Page Layout**
+
+Use YouTube as inspiration.
+
+#### **Goal Layout**
+
+* Header (logo + search)
+* Sidebar (navigation)
+* Main content (video cards)
+* Footer
+
+---
+
+#### **Basic Structure**
+
+```html id="i5h9ra"
+<!DOCTYPE html>
+<html>
+<head>
+  <title>YouTube Layout</title>
+</head>
+<body>
+
+<header>
+  <h1>MyTube</h1>
+</header>
+
+<nav>
+  <a href="#">Home</a>
+  <a href="#">Trending</a>
+  <a href="#">Subscriptions</a>
+</nav>
+
+<main>
+
+  <section>
+    <article>
+      <h3>Video Title 1</h3>
+      <p>Channel Name</p>
+    </article>
+
+    <article>
+      <h3>Video Title 2</h3>
+      <p>Channel Name</p>
+    </article>
+  </section>
+
+  <aside>
+    <p>Recommended Videos</p>
+  </aside>
+
+</main>
+
+<footer>
+  <p>© 2026 MyTube</p>
+</footer>
+
+</body>
+</html>
+```
+
+---
+
+### **5. Teaching Focus (Depth)**
+
+Emphasize:
+
+* **Structure ≠ Style**
+  Semantic HTML is about meaning, not appearance
+
+* **Accessibility benefits**
+  Screen readers rely on semantic tags
+
+* **SEO basics**
+  Search engines better understand structured content
+
+* **Replace “div soup” mindset**
+  Encourage intentional tag usage
+
+---
+
+### **6. Suggested Hands-On Activities**
+
+* Convert a `<div>`-based layout into semantic tags
+* Add a sidebar using `<aside>`
+* Create 3 video cards using `<article>`
+* Add a proper `<header>` and `<footer>`
+
+---
+
+### **7. Wrap-Up Insight**
+
+By the end of Session 4, students should:
+
+* Understand semantic vs non-semantic HTML
+* Use appropriate tags for page structure
+* Build a clean, meaningful layout
+* Prepare for CSS styling in upcoming sessions
+
+---
+
+Here’s a clean, practical structure for your **Session 5: Introduction to CSS 3**, with a simple but engaging demo:
+
+---
+
+## **Session 5: Introduction to CSS 3**
+
+### **1. What is CSS?**
+
+CSS (**Cascading Style Sheets**) controls the **appearance** of HTML.
+
+👉 If HTML is the structure, CSS is the **design layer**:
+
+* Colors
+* Fonts
+* Spacing
+* Layout
+
+---
+
+### **2. Ways to Apply CSS**
+
+#### **Inline CSS**
+
+```html id="6g3e0z"
+<p style="color: red;">Hello</p>
+```
+
+* Applied directly to an element
+* ❌ Not recommended for large projects
+
+---
+
+#### **Internal CSS**
+
+```html id="2d8zbn"
+<head>
+  <style>
+    p {
+      color: blue;
+    }
+  </style>
+</head>
+```
+
+* Defined inside `<style>` tag
+* Good for small pages
+
+---
+
+#### **External CSS (Best Practice)**
+
+```html id="k4wz0y"
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+```
+
+```css id="t3j2yo"
+p {
+  color: green;
+}
+```
+
+👉 Keeps HTML clean and reusable
+
+---
+
+### **3. CSS Selectors**
+
+Selectors target HTML elements.
+
+```css id="3htzvd"
+/* Element selector */
+p {
+  color: blue;
+}
+
+/* Class selector */
+.card {
+  background-color: lightgray;
+}
+
+/* ID selector */
+#title {
+  font-size: 24px;
+}
+```
+
+👉 Key idea:
+
+* `.` → class
+* `#` → id
+
+---
+
+### **4. Colors in CSS**
+
+```css id="3fj0r2"
+h1 {
+  color: red;
+}
+
+p {
+  color: #333333;
+}
+
+body {
+  background-color: rgb(240, 240, 240);
+}
+```
+
+**Types:**
+
+* Named colors (`red`)
+* HEX (`#000000`)
+* RGB (`rgb(255,0,0)`)
+
+---
+
+### **5. Fonts**
+
+```css id="zv94xv"
+body {
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: bold;
+}
+```
+
+👉 Always include a fallback font (`sans-serif`, `serif`)
+
+---
+
+### **6. Demo: Light/Dark Theme Switch**
+
+This is a great intro to real-world UI behavior.
+
+---
+
+#### **HTML**
+
+```html id="r1zqj8"
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Theme Switch</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <h1 id="title">My Website</h1>
+  <p>This is a theme switch demo.</p>
+
+  <button onclick="toggleTheme()">Switch Theme</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
+```
+
+---
+
+#### **CSS**
+
+```css id="6g0qmv"
+/* Light Theme (default) */
+body {
+  background-color: white;
+  color: black;
+}
+
+/* Dark Theme */
+.dark {
+  background-color: #121212;
+  color: white;
+}
+```
+
+---
+
+#### **JavaScript (Simple Toggle)**
+
+```html id="9uy9p9"
+<script>
+function toggleTheme() {
+  document.body.classList.toggle("dark");
+}
+</script>
+```
+
+---
+
+### **7. Teaching Focus (Depth)**
+
+Emphasize:
+
+* **Separation of concerns**
+  HTML = structure, CSS = style
+
+* **Selector understanding**
+  Students should know *how CSS finds elements*
+
+* **Cascade concept (basic intro)**
+  Styles can override each other
+
+* **Reusability**
+  Classes > inline styles
+
+---
+
+### **8. Suggested Hands-On Activities**
+
+* Change background + text colors
+* Create 2 custom classes (`.light`, `.dark`)
+* Apply different fonts to headings and paragraphs
+* Modify button styling
+
+---
+
+Here’s a structured, concept-first version of your **Session 6: Box Model & Positioning**, with a hands-on demo that ties everything together:
+
+---
+
+## **Session 6: Box Model & Positioning**
+
+### **1. The CSS Box Model**
+
+Every HTML element is a rectangular box made of:
+
+```text
+[ Margin ]
+  [ Border ]
+    [ Padding ]
+      [ Content ]
+```
+
+#### **Breakdown**
+
+* **Content** → text/image inside
+* **Padding** → space inside the box
+* **Border** → edge around the box
+* **Margin** → space outside the box
+
+---
+
+#### **Example**
+
+```css id="l4k9z2"
+.card {
+  width: 300px;
+  padding: 20px;
+  border: 2px solid black;
+  margin: 10px;
+}
+```
+
+👉 Key idea:
+Spacing problems in UI usually come down to **margin vs padding confusion**.
+
+---
+
+### **2. Display Properties**
+
+Controls how elements behave in layout:
+
+```css id="7g5xk1"
+div {
+  display: block;
+}
+
+span {
+  display: inline;
+}
+
+.card {
+  display: inline-block;
+}
+```
+
+#### **Types**
+
+* **block** → full width (e.g., `<div>`)
+* **inline** → only content width (e.g., `<span>`)
+* **inline-block** → mix of both
+
+👉 Important:
+You can change how elements behave regardless of their default type.
+
+---
+
+### **3. Positioning in CSS**
+
+Position determines where elements appear.
+
+#### **Static (default)**
+
+```css id="f0b5xq"
+div {
+  position: static;
+}
+```
+
+---
+
+#### **Relative**
+
+```css id="5x1k4d"
+.box {
+  position: relative;
+  top: 10px;
+  left: 20px;
+}
+```
+
+* Moves relative to its **original position**
+
+---
+
+#### **Absolute**
+
+```css id="a0p3qw"
+.child {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+```
+
+* Positioned relative to **nearest positioned parent**
+
+---
+
+#### **Fixed**
+
+```css id="t1o7y8"
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+```
+
+* Stays fixed on screen (even when scrolling)
+
+---
+
+### **4. Demo: Profile Card Layout**
+
+Goal: Build a clean card like a social profile.
+
+---
+
+#### **HTML**
+
+```html id="9j3k2l"
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Profile Card</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="card">
+  <img src="profile.jpg" alt="Profile Photo">
+  <h2>John Doe</h2>
+  <p>Web Developer</p>
+  <button>Follow</button>
+</div>
+
+</body>
+</html>
+```
+
+---
+
+#### **CSS**
+
+```css id="c7n2sd"
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+/* Card styling */
+.card {
+  width: 300px;
+  padding: 20px;
+  margin: 50px auto;
+  border: 1px solid #ccc;
+  background-color: white;
+  text-align: center;
+  border-radius: 10px;
+}
+
+/* Image */
+.card img {
+  width: 100px;
+  border-radius: 50%;
+}
+
+/* Button */
+button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  border: none;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+```
+
+---
+
+### **5. Optional Enhancement (Positioning Example)**
+
+Add a badge:
+
+```css id="1p9qzs"
+.card {
+  position: relative;
+}
+
+.badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: red;
+  color: white;
+  padding: 5px;
+  font-size: 12px;
+}
+```
+
+```html id="c4m1r8"
+<div class="card">
+  <div class="badge">PRO</div>
+  ...
+</div>
+```
+
+---
+
+### **6. Teaching Focus (Depth)**
+
+Emphasize:
+
+* **Box model mastery = layout control**
+* **Margin vs Padding clarity**
+* **Position depends on parent context**
+* **Display affects layout flow**
+
+👉 Common mistake to highlight:
+
+* Using `absolute` without a `relative` parent
+
+---
+
+### **7. Suggested Hands-On Tasks**
+
+* Add margin and padding variations
+* Change card alignment using `margin: auto`
+* Add a badge using absolute positioning
+* Convert button to `inline-block`
+
+---
+
+Template:
+Got it—but instead of just stitching your snippets together, here’s a **clean, beginner-friendly full template** that *actually demonstrates everything from Sessions 1–6 working together*: structure, semantic HTML, forms, CSS, box model, positioning, and a small interaction (theme switch).
+
+This is something students can **run, edit, and expand**.
+
+---
+
+# 🌐 **Beginner Full Website Template (All Concepts Combined)**
+
+## **1. HTML (index.html)**
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Profile Website</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header>
+  <h1>My Website</h1>
+  <button onclick="toggleTheme()">🌙</button>
+</header>
+
+<nav>
+  <a href="#">Home</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<main>
+
+  <!-- Profile Card -->
+  <section id="about">
+    <div class="card">
+      <div class="badge">NEW</div>
+      <img src="https://via.placeholder.com/100" alt="Profile">
+      <h2>Your Name</h2>
+      <p>Web Developer</p>
+      <button>Follow</button>
+    </div>
+  </section>
+
+  <!-- Form Section -->
+  <section id="contact">
+    <h2>Register</h2>
+
+    <form action="#" method="POST">
+
+      <label>Name:</label><br>
+      <input type="text" required><br><br>
+
+      <label>Email:</label><br>
+      <input type="email" required><br><br>
+
+      <label>Role:</label><br>
+      <select>
+        <option>Student</option>
+        <option>Developer</option>
+      </select><br><br>
+
+      <label>Bio:</label><br>
+      <textarea></textarea><br><br>
+
+      <button type="submit">Submit</button>
+
+    </form>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2026 My Website</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+```
+
+---
+
+## **2. CSS (styles.css)**
+
+```css
+/* Reset */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Theme */
+body {
+  background-color: white;
+  color: black;
+}
+
+.dark {
+  background-color: #121212;
+  color: white;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  background: black;
+  color: white;
+}
+
+/* Navigation */
+nav {
+  background: #333;
+  padding: 10px;
+}
+
+nav a {
+  color: white;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+/* Sections */
+section {
+  padding: 20px;
+}
+
+/* Profile Card */
+.card {
+  width: 250px;
+  padding: 20px;
+  margin: auto;
+  border: 1px solid #ccc;
+  text-align: center;
+  position: relative;
+  border-radius: 10px;
+  background: white;
+}
+
+.card img {
+  width: 100px;
+  border-radius: 50%;
+}
+
+/* Badge */
+.badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: red;
+  color: white;
+  padding: 5px;
+  font-size: 12px;
+}
+
+/* Form */
+form {
+  max-width: 300px;
+  margin: auto;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+}
+
+/* Buttons */
+button {
+  padding: 10px;
+  border: none;
+  background: black;
+  color: white;
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 10px;
+  background: #eee;
+}
+```
+
+---
+
+## **3. JavaScript (script.js)**
+
+```javascript
+function toggleTheme() {
+  document.body.classList.toggle("dark");
+}
+```
+
+---
+
+# 🎯 **What This Template Teaches**
+
+This isn’t just a page—it’s a **mini project covering all sessions**:
+
+### ✅ HTML
+
+* Boilerplate structure
+* Semantic tags (`header`, `nav`, `section`, `footer`)
+* Forms + inputs
+
+### ✅ CSS
+
+* Selectors
+* Colors & fonts
+* Box model (margin, padding, border)
+* Positioning (`absolute`, `relative`)
+
+### ✅ Layout Concepts
+
+* Centering with margin
+* Card UI design
+* Navigation bar
+
+### ✅ Interactivity
+
+* Light/Dark theme toggle
+
+---
+
+# 🧠 **How to Teach With This**
+
+Don’t just give the code—guide them to build it:
+
+1. Start with HTML structure only
+2. Add CSS step-by-step
+3. Build the card
+4. Add form
+5. Add theme switch
+
+👉 Let them **break and fix things**—that’s where learning happens.
+
+---
+
+If you want next step, I can turn this into:
+
+* **Step-by-step lab exercise**
+* **Assignment sheet**
+* **Mini project (Bio Link App like Linktree)**
+
+
+
+
+
+
+
