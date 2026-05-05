@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter', sans-serif;
+}
+ body
+ {
+    background:#f4f7ff;
+    color:#222;
+}
+.logo{
+    font-size:20px;
+    font-weight:700;
+    letter-spacing:1px;
+}
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+    font-size:14px;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#4da3ff;
+}
+header{
+    position:sticky;
+    top:0;
+    background:rgba(17,17,17,0.85);
+    backdrop-filter: blur(10px);
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 60px;
+    z-index:1000;
+}
+
+footer{
+    background:#111;
+    color:#aaa;
+    text-align:center;
+    padding:20px;
+    font-size:14px;
+}
+.hero{
+    height:400px;
+    background:linear-gradient(135deg,#4da3ff,#6c5ce7);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:48px;
+    font-weight:700;
+}
+
+.hero p{
+    margin-top:10px;
+    font-size:16px;
+    opacity:0.9;
+}
+.section-title{
+    text-align:center;
+    margin:50px 0 20px;
+    font-size:26px;
+    font-weight:600;
+}
+
+/* CARDS */
+.container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    padding:0 60px 60px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-48px);
+    box-shadow:0 15px 30px rgba(0,0,0,0.12);
+}
+
+.card h3{
+    margin-bottom:10px;
+    color:#4a4a4a;
+}
+
+.card p{
+    font-size:14px;
+    color:#666;
+    line-height:1.5;
+}
+
+    </style>
+</head>
+<body>
+
+    <header>
+    <div class="logo">ProWeb</div>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Features</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+
+<section class="hero">
+    <h1>Build Modern Websites</h1>
+    <p>Clean UI • Responsive Design • Simple HTML & CSS</p>
+</section>
+
+<div class="section-title">Our Features</div>
+
+<section class="container">
+
+    <div class="card">
+        <h3>Fast Performance</h3>
+        <p>Optimized structure for smooth loading and better user experience.</p>
+    </div>
+
+    <div class="card">
+        <h3>Modern UI Design</h3>
+        <p>Clean, minimal and professional interface with soft shadows.</p>
+    </div>
+
+    <div class="card">
+        <h3>Responsive Layout</h3>
+        <p>Automatically adjusts on mobile, tablet and desktop screens.</p>
+    </div>
+
+    <div class="card">
+        <h3>Easy Customization</h3>
+        <p>Change colors, text and layout easily without complexity.</p>
+    </div>
+
+</section>
+
+
+<footer>
+    © 2026 ProWeb | Designed with HTML & CSS
+</footer>  
+</body>
+</html>
