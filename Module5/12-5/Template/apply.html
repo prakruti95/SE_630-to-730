@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apply | TOPS TECHNOLOGIES</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">TOPS TECHNOLOGIES</a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+      <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="courses.html">Courses</a>
+        <a href="apply.html" class="active">Apply</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-banner apply-banner">
+      <div class="container banner-content">
+        <div>
+          <p class="section-label">Application</p>
+          <h1>Apply for your preferred IT training</h1>
+          <p>Complete the form below to start your enrollment process and secure a seat in the next batch.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section apply-section">
+      <div class="container apply-grid">
+        <div class="apply-form-card glass-card">
+          <h2>Course Application Form</h2>
+          <form id="applyForm" class="apply-form" novalidate>
+            <div class="form-row">
+              <label>Full Name<input type="text" name="fullName" placeholder="Your full name" required /></label>
+              <label>Father Name<input type="text" name="fatherName" placeholder="Father's name" required /></label>
+            </div>
+            <div class="form-row">
+              <label>Gender<select name="gender" required><option value="">Select gender</option><option>Male</option><option>Female</option><option>Other</option></select></label>
+              <label>Date of Birth<input type="date" name="dob" required /></label>
+            </div>
+            <div class="form-row">
+              <label>Email<input type="email" name="email" placeholder="you@example.com" required /></label>
+              <label>Mobile Number<input type="tel" name="mobile" placeholder="+91 98765 43210" required /></label>
+            </div>
+            <label>Address<textarea name="address" rows="3" placeholder="Your address" required></textarea></label>
+            <div class="form-row">
+              <label>Qualification<select name="qualification" required><option value="">Select qualification</option><option>10th</option><option>12th</option><option>Diploma</option><option>Graduation</option><option>Post Graduation</option></select></label>
+              <label>Select Course<select name="course" required><option value="">Choose course</option><option>Full Stack Development</option><option>React JS</option><option>Python</option><option>Java</option><option>PHP</option><option>UI/UX Design</option><option>Data Science</option><option>Digital Marketing</option></select></label>
+            </div>
+            <div class="form-row">
+              <label>Upload Resume<input type="file" name="resume" accept=".pdf,.doc,.docx" required /></label>
+              <label>Upload Photo<input type="file" name="photo" accept="image/*" required /></label>
+            </div>
+            <div class="form-row">
+              <label>Preferred Timing<select name="timing" required><option value="">Select timing</option><option>Morning</option><option>Afternoon</option><option>Evening</option><option>Weekend</option></select></label>
+              <label>Payment Option<select name="payment" required><option value="">Select payment</option><option>Cash</option><option>Online Transfer</option><option>UPI</option><option>EMI</option></select></label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit Application</button>
+            <p class="form-response" id="applyResponse"></p>
+          </form>
+        </div>
+
+        <aside class="apply-info-card glass-card">
+          <h3>Application Benefits</h3>
+          <ul>
+            <li>Free course counselling</li>
+            <li>Immediate batch confirmation</li>
+            <li>Payment flexibility and support</li>
+            <li>Dedicated admissions team</li>
+          </ul>
+          <div class="apply-contact">
+            <p><strong>Phone:</strong> +91 98765 43210</p>
+            <p><strong>Email:</strong> info@topstechnologies.com</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div><a href="index.html" class="brand footer-brand">TOPS TECHNOLOGIES</a><p>Submit your application and take the first step toward a new IT career.</p></div>
+      <div class="footer-links"><h4>Quick Links</h4><a href="index.html">Home</a><a href="about.html">About</a><a href="courses.html">Courses</a><a href="contact.html">Contact</a></div>
+      <div class="footer-contact"><h4>Contact</h4><p>Email: info@topstechnologies.com</p><p>Phone: +91 98765 43210</p></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 TOPS TECHNOLOGIES. All rights reserved.</p></div>
+  </footer>
+
+  <div class="modal" id="successModal" aria-hidden="true">
+    <div class="modal-content">
+      <h2>Application Submitted</h2>
+      <p>Thank you for applying! Our admissions team will contact you soon with the next steps.</p>
+      <button class="btn btn-secondary" id="modalClose">Close</button>
+    </div>
+  </div>
+
+  <button class="back-to-top" id="backToTop">↑</button>
+  <script src="script.js"></script>
+</body>
+</html>

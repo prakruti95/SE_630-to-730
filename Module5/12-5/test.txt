@@ -1,0 +1,359 @@
+1. Gallery:
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+div.gallery-item {
+  margin: 5px;
+  border: 1px solid #ccc;
+  width: 180px;
+}
+div.gallery-item:hover {
+  border: 1px solid #777;
+}
+div.gallery-item img {
+  width: 100%;
+  height: auto;
+}
+
+div.gallery-item div.desc {
+  padding: 15px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<h2>Image Gallery</h2>
+
+<div class="gallery">
+
+<div class="gallery-item">
+  <a target="_blank" href="img_5terre.jpg">
+    <img src="img_5terre.jpg" alt="Cinque Terre" width="600" height="400">
+  </a>
+  <div class="desc">Cinque Terre</div>
+</div>
+
+<div class="gallery-item">
+  <a target="_blank" href="img_forest.jpg">
+    <img src="img_forest.jpg" alt="Forest" width="600" height="400">
+  </a>
+  <div class="desc">Green Forest</div>
+</div>
+
+<div class="gallery-item">
+  <a target="_blank" href="img_lights.jpg">
+    <img src="img_lights.jpg" alt="Northern Lights" width="600" height="400">
+  </a>
+  <div class="desc">Northern Lights</div>
+</div>
+
+<div class="gallery-item">
+  <a target="_blank" href="img_mountains.jpg">
+    <img src="img_mountains.jpg" alt="Mountains" width="600" height="400">
+  </a>
+  <div class="desc">Mountains</div>
+</div>
+
+</div>
+
+</body>
+</html>
+
+
+2.
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#home {
+  width: 46px;
+  height: 44px;
+  background-image: url(img_navsprites.gif);
+  background-position: 0 0;
+}
+
+#prev {
+  width: 43px;
+  height: 44px;  
+  background-image: url('img_navsprites.gif');
+  background-position: -47px 0;  
+}
+
+#next {
+  width: 43px;
+  height: 44px;  
+  background-image: url('img_navsprites.gif');
+  background-position: -91px 0;  
+}
+</style>
+</head>
+<body>
+
+<h2>Image Sprites</h2>
+
+<img id="home" src="img_trans.gif" width="1" height="1">
+<img id="prev" src="img_trans.gif" width="1" height="1">
+<img id="next" src="img_trans.gif" width="1" height="1">
+
+</body>
+</html>
+
+3. flexbox:
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.container {
+  display: flex;
+  background-color: DodgerBlue;
+}
+
+.container div {
+  background-color: #f1f1f1;
+  margin: 10px;
+  padding: 20px;
+  font-size: 24px;
+}
+</style>
+</head>
+<body>
+
+<h1>Create a Flex Container</h1>
+
+<div class="container">
+  <div>Item 1</div>
+  <div>Item 2</div>
+  <div>Item 3</div>  
+</div>
+
+<p>Flexbox must have a parent element with the display property set to flex or inline-flex.</p>
+<p>Direct child elements of the flex container automatically becomes flex items.</p>
+
+</body>
+</html>
+
+
+4.flex container:
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.container {
+  display: flex;
+  flex-direction: row;
+  background-color: DodgerBlue;
+}
+
+.container div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;  
+  font-size: 30px;
+}
+</style>
+</head>
+<body>
+
+<h1>flex-direction: row</h1>
+
+<p>flex-direction: row; displays the flex items horizontally (from left to right):</p>
+
+<div class="container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+  <div>3</div>  
+  <div>3</div>  
+  
+</div>
+
+</body>
+</html>
+
+--------------------
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-item {
+  background-color: #f1f1f1;
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+  width: 100%;
+}
+
+/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  .flex-container {
+    flex-direction: column;
+  }
+}
+</style>
+</head>
+<body>
+
+<h1>Responsive Flexbox</h1>
+
+<p>On screens that are 600px wide or less, the columns will stack on top of each other instead of next to eachother.</p>
+<p><strong>Resize the browser window to see the effect.</strong></p>
+
+<div class="flex-container">
+  <div class="flex-item">1</div>
+  <div class="flex-item">2</div>
+  <div class="flex-item">3</div>  
+</div>
+
+</body>
+</html>
+
+
+
+-------------------
+Grid:
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.container {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "menu content"
+    "footer footer";
+  grid-template-columns: 1fr 3fr;
+  gap: 3px;
+  background-color: dodgerblue;
+  padding: 5px;
+}
+.container div {
+  background-color: white;
+  padding: 10px;
+}
+.container div.header {
+  grid-area: header;
+  text-align: center;
+}
+.container div.menu {
+  grid-area: menu;
+}
+.container div.content {
+  grid-area: content;
+}
+.container div.footer {
+  grid-area: footer;
+  text-align: center;  
+}
+</style>
+</head>
+<body>
+
+<h1>CSS Grid Layout</h1>
+
+<p>The Grid Layout Module offers a grid-based layout system, with rows and columns.</p>
+<p>The Grid Layout Module makes it easy to design complex and responsive web pages without using floats and positioning:</p>
+
+<div class="container">
+  <div class="header"><h2>My Header</h2></div>
+  <div class="menu"><a href="#">Link 1</a><br><a href="#">Link 2</a><br><a href="#">Link 3</a></div>
+  <div class="content"><h3>Lorem Ipsum</h3><p>Lorem ipsum odor amet, consectetuer adipiscing elit. Ridiculus sit nisl laoreet facilisis aliquet. Potenti dignissim litora eget montes rhoncus sapien neque urna. Cursus libero sapien integer magnis ligula lobortis quam ut.</p></div>
+  <div class="footer"><h4>Footer</h4></div>
+</div>
+
+</body>
+</html>
+
+
+-----------------------------
+<!DOCTYPE html>
+<html>
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+<style>
+body {font-family: "Raleway", Arial, sans-serif}
+.w3-row img {margin-bottom: -8px}
+</style>
+</head>
+<body>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-content" style="max-width:1500px">
+
+  <!-- Header -->
+  <header class="w3-container w3-xlarge w3-padding-24">
+    <a href="#" class="w3-left w3-button w3-white">MY ART</a>
+    <a href="#about" class="w3-right w3-button w3-white">About</a>
+  </header>
+
+  <!-- Photo Grid -->
+  <div class="w3-row">
+    <div class="w3-half">
+      <img src="/w3images/streetart.jpg" style="width:100%">
+      <img src="/w3images/streetart2.jpg" style="width:100%">
+      <img src="/w3images/streetart5.jpg" style="width:100%">
+    </div>
+
+    <div class="w3-half">
+      <img src="/w3images/streetart3.jpg" style="width:100%">
+      <img src="/w3images/streetart4.jpg" style="width:100%">
+    </div>
+  </div>
+  
+<!-- End Page Content -->
+</div>
+
+<!-- Footer / About Section -->
+<footer class="w3-light-grey w3-padding-64 w3-center" id="about">
+  <h2>About</h2>
+  <img src="/w3images/boy.jpg" class="w3-image w3-padding-32" width="300" height="300">
+  <form style="margin:auto;width:60%" action="/action_page.php" target="_blank">
+    <p>Just me, myself and I, exploring the universe of unknownment. I have a heart of love and an interest of lorem ipsum and mauris neque quam blog. I want to share my world with you. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+    <p class="w3-large w3-text-pink">Do not hesitate to contact me!</p>
+    <div class="w3-section">
+      <label><b>Name</b></label>
+      <input class="w3-input w3-border" type="text" required name="Name">
+    </div>
+    <div class="w3-section">
+      <label><b>Email</b></label>
+      <input class="w3-input w3-border" type="text" required name="Email">
+    </div>
+    <div class="w3-section">
+      <label><b>Message</b></label>
+      <input class="w3-input w3-border" required name="Message">
+    </div>
+    <button type="submit" class="w3-button w3-block w3-dark-grey">Send</button>
+  </form>
+  <br>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+ 
+</body>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>My Profile Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+<header>
+  <h1>My Website</h1>
+   <button onclick="toggleTheme()">🌙</button>
+ </header>
+
+
+<nav>
+  <a href="#">Home</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<main>
+<section id="about">
+    <div class="card">
+      <div class="badge">NEW</div>
+      <img src="https://static.vecteezy.com/system/resources/thumbnails/029/271/062/small/avatar-profile-icon-in-flat-style-male-user-profile-illustration-on-isolated-background-man-profile-sign-business-concept-vector.jpg" alt="Profile">
+      <h2>Dhyey</h2>
+      <p>Web Developer</p>
+      <button>Follow</button>
+    </div>
+  </section>
+
+   <section id="contact">
+    <h2>Register</h2>
+
+    <form action="#" method="POST">
+
+      <label>Name:</label><br>
+      <input type="text" required><br><br>
+
+      <label>Email:</label><br>
+      <input type="email" required><br><br>
+
+      <label>Role:</label><br>
+      <select>
+        <option>Student</option>
+        <option>Developer</option>
+      </select><br><br>
+
+      <label>Bio:</label><br>
+      <textarea></textarea><br><br>
+
+      <button type="submit">Submit</button>
+
+    </form>
+  </section>
+
+</main>
+<footer>
+  <p>© 2026 My Website</p>
+</footer>
+
+</body>
+</html>

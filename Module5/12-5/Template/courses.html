@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Courses | TOPS TECHNOLOGIES</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">TOPS TECHNOLOGIES</a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+      <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="courses.html" class="active">Courses</a>
+        <a href="apply.html">Apply</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-banner courses-banner">
+      <div class="container banner-content">
+        <div>
+          <p class="section-label">Courses</p>
+          <h1>Explore our professional IT programs</h1>
+          <p>Search course options, filter by discipline, and review the syllabus for each training path.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section course-search-section">
+      <div class="container course-search-card glass-card">
+        <input id="courseSearch" type="search" placeholder="Search courses..." />
+        <select id="courseCategory">
+          <option value="all">All categories</option>
+          <option value="web">Web Development</option>
+          <option value="software">Software Programming</option>
+          <option value="design">Design</option>
+          <option value="data">Data Science</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="section courses-list-section">
+      <div class="container course-list-grid" id="courseList">
+        <article class="course-card course-card-large" data-category="web">
+          <div class="course-card-header"><span>Full Stack Development</span><p>6 Months</p></div>
+          <p>End-to-end training in HTML, CSS, JavaScript, Node.js, and MongoDB with practical projects.</p>
+          <div class="course-meta"><strong>Fees:</strong> ₹25,000</div>
+          <div class="course-buttons">
+            <a href="apply.html" class="btn btn-secondary btn-small">Apply Now</a>
+            <a href="courses.html" class="btn btn-primary btn-small">View Details</a>
+          </div>
+        </article>
+        <article class="course-card" data-category="web">
+          <div class="course-card-header"><span>React JS</span><p>3 Months</p></div>
+          <p>Build dynamic user interfaces using React, component patterns, and hooks.</p>
+          <div class="course-meta"><strong>Fees:</strong> ₹12,500</div>
+          <a href="apply.html" class="btn btn-primary btn-small">Apply Now</a>
+        </article>
+        <article class="course-card" data-category="software">
+          <div class="course-card-header"><span>Java</span><p>4 Months</p></div>
+          <p>Core Java training covering OOP, collections, multithreading, and Java applications.</p>
+          <div class="course-meta"><strong>Fees:</strong> ₹13,500</div>
+          <a href="apply.html" class="btn btn-primary btn-small">Apply Now</a>
+        </article>
+        <article class="course-card" data-category="software">
+          <div class="course-card-header"><span>Python</span><p>4 Months</p></div>
+          <p>Python programming fundamentals, scripting, automation and data analysis essentials.</p>
+          <div class="course-meta"><strong>Fees:</strong> ₹11,000</div>
+          <a href="apply.html" class="btn btn-primary btn-small">Apply Now</a>
+        </article>
+        <article class="course-card" data-category="web">
+          <div class="course-card-header"><span>PHP</span><p>3 Months</p></div>
+          <p>Web backend development with PHP, MySQL, and dynamic websites.</p>
+          <div class="course-meta"><strong>Fees:</strong> ₹10,500</div>
+          <a href="apply.html" class="btn btn-primary btn-small">Apply Now</a>
+        </article>
+        <article class="course-card" data-category="design">
+          <div class="course-card-header"><span>UI/UX Design</span><p>2 Months</p></div>
+          <p>Design beautiful digital products with user research, wireframes, and visual design.</p>
+          <div class="course-meta"><strong>Fees:</strong> ₹9,500</div>
+          <a href="apply.html" class="btn btn-primary btn-small">Apply Now</a>
+        </article>
+        <article class="course-card" data-category="data">
+          <div class="course-card-header"><span>Data Science</span><p>5 Months</p></div>
+          <p>Data analytics and machine learning fundamentals with Python libraries.</p>
+          <div class="course-meta"><strong>Fees:</strong> ₹18,000</div>
+          <a href="apply.html" class="btn btn-primary btn-small">Apply Now</a>
+        </article>
+        <article class="course-card" data-category="web">
+          <div class="course-card-header"><span>Digital Marketing</span><p>2 Months</p></div>
+          <p>Marketing skills for SEO, social media, content strategy, and online campaigns.</p>
+          <div class="course-meta"><strong>Fees:</strong> ₹8,000</div>
+          <a href="apply.html" class="btn btn-primary btn-small">Apply Now</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div><a href="index.html" class="brand footer-brand">TOPS TECHNOLOGIES</a><p>Explore our complete course offerings and start building your IT career.</p></div>
+      <div class="footer-links"><h4>Quick Links</h4><a href="index.html">Home</a><a href="about.html">About</a><a href="apply.html">Apply</a><a href="contact.html">Contact</a></div>
+      <div class="footer-contact"><h4>Contact</h4><p>Email: info@topstechnologies.com</p><p>Phone: +91 98765 43210</p></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 TOPS TECHNOLOGIES. All rights reserved.</p></div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop">↑</button>
+  <script src="script.js"></script>
+</body>
+</html>
