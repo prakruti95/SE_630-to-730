@@ -1,0 +1,54 @@
+body{
+    background: linear-gradient(135deg,#6a11cb,#2575fc);
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.preview-card{
+    background: white;
+    border-radius: 25px;
+    padding: 40px;
+}
+
+.profile-img{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 5px solid #2575fc;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.btn{
+    padding: 12px;
+    border-radius: 12px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover{
+    transform: scale(1.04);
+}
+
+.btn-instagram{
+    background: #E1306C;
+    color: white;
+}
+
+.btn-linkedin{
+    background: #0077B5;
+    color: white;
+}
+
+.btn-spotify{
+    background: #1DB954;
+    color: white;
+}
+
+@media(max-width:768px){
+
+    .preview-card{
+        padding: 25px;
+    }
+
+}
