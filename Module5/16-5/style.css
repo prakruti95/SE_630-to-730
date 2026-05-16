@@ -1,0 +1,361 @@
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+/* SMOOTH SCROLL */
+
+html{
+    scroll-behavior:smooth;
+}
+
+/* BODY */
+
+body{
+    background:#f1f5f9;
+    color:#333;
+}
+
+/* HEADER */
+
+header{
+    width:100%;
+    background:#0f172a;
+    color:white;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 8%;
+
+    position:sticky;
+    top:0;
+
+    z-index:1000;
+}
+
+/* LOGO */
+
+.logo{
+    font-size:30px;
+    font-weight:700;
+}
+
+/* NAVBAR */
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:25px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    font-size:17px;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#38bdf8;
+}
+
+/* HERO SECTION */
+
+.hero{
+    min-height:90vh;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:70px 8%;
+
+    gap:50px;
+    flex-wrap:wrap;
+}
+
+/* HERO TEXT */
+
+.hero-text{
+    flex:1;
+}
+
+.hero-text h1{
+    font-size:55px;
+    margin-bottom:20px;
+    color:#0f172a;
+}
+
+.hero-text p{
+    font-size:18px;
+    line-height:1.8;
+    margin-bottom:25px;
+}
+
+/* BUTTON */
+
+button{
+    padding:14px 30px;
+    border:none;
+    background:#0ea5e9;
+    color:white;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#0284c7;
+    transform:scale(1.05);
+}
+
+/* HERO IMAGE */
+
+.hero-image{
+    flex:1;
+}
+
+.hero-image img{
+    width:100%;
+    border-radius:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.2);
+}
+
+/* SECTION TITLE */
+
+.title{
+    text-align:center;
+    font-size:40px;
+    margin-bottom:50px;
+    color:#0f172a;
+}
+
+/* FEATURES */
+
+.features{
+    padding:80px 8%;
+}
+
+/* FEATURE BOX */
+
+.feature-box{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+/* CARD */
+
+.card{
+    width:300px;
+    background:white;
+
+    padding:35px;
+
+    border-radius:18px;
+
+    text-align:center;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+
+    transition:0.1s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card h3{
+    margin-bottom:15px;
+    color:#0284c7;
+    font-size:28px;
+}
+
+.card p{
+    line-height:1.8;
+}
+
+/* ABOUT SECTION */
+
+.about{
+    background:white;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    gap:50px;
+
+    flex-wrap:wrap;
+
+    padding:80px 8%;
+}
+
+/* ABOUT IMAGE */
+
+.about-image{
+    flex:1;
+}
+
+.about-image img{
+    width:100%;
+    border-radius:20px;
+}
+
+/* ABOUT TEXT */
+
+.about-text{
+    flex:1;
+}
+
+.about-text h2{
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+.about-text p{
+    line-height:1.9;
+    margin-bottom:20px;
+    font-size:17px;
+}
+
+/* GALLERY */
+
+.gallery{
+    padding:80px 8%;
+}
+
+/* GALLERY BOX */
+
+.gallery-box{
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:20px;
+}
+
+/* GALLERY IMAGE */
+
+.gallery-box img{
+    width:100%;
+    height:250px;
+
+    object-fit:cover;
+
+    border-radius:15px;
+
+    transition:0.4s;
+}
+
+.gallery-box img:hover{
+    transform:scale(1.05);
+}
+
+/* CONTACT */
+
+.contact{
+    background:white;
+    padding:80px 8%;
+}
+
+/* FORM */
+
+form{
+    max-width:700px;
+
+    margin:auto;
+
+    display:flex;
+    flex-direction:column;
+
+    gap:20px;
+}
+
+/* INPUT */
+
+form input,
+form textarea{
+    padding:15px;
+
+    border:1px solid #ccc;
+
+    border-radius:10px;
+
+    outline:none;
+
+    font-size:16px;
+}
+
+/* FORM BUTTON */
+
+form button{
+    width:100%;
+}
+
+/* FOOTER */
+
+footer{
+    background:#0f172a;
+
+    color:white;
+
+    text-align:center;
+
+    padding:20px;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media(max-width:768px){
+
+    /* HEADER */
+
+    header{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    /* NAVBAR */
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    nav ul li{
+        margin:10px;
+    }
+
+    /* HERO */
+
+    .hero{
+        text-align:center;
+    }
+
+    .hero-text h1{
+        font-size:40px;
+    }
+
+    /* ABOUT */
+
+    .about{
+        text-align:center;
+    }
+
+    .about-text h2{
+        font-size:34px;
+    }
+
+}
